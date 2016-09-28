@@ -1,6 +1,6 @@
 ## Food Hygiene Rating UK
 
 
-### Credito
+### Credits
 
  - Data: [Food Standards Agency'](http://ratings.food.gov.uk/open-data/)
