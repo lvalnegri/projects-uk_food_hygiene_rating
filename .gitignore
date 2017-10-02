@@ -24,3 +24,4 @@ vignettes/*.pdf
 *.knit.md
 .Rproj.user
 projects-uk_food_hygiene_rating.Rproj
+LAD.csv
