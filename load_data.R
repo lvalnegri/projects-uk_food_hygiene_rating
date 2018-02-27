@@ -128,7 +128,7 @@ dts <- dts[shops[, .(tot_shops = .N), sector_id]]
 # save sectors to database and csv file for github
 dbSendQuery(dbc, "TRUNCATE TABLE sectors")
 dbWriteTable(dbc, 'sectors', dts, row.names = FALSE, append = TRUE)
-write.csv(dts, 'sectors.csv', row.names = FALSE)
+write.csv(dts, 'csv/sectors.csv', row.names = FALSE)
 
 # prepare ratings for lads
 lads[, url := NULL]
@@ -140,7 +140,7 @@ lads <- dts[lads, on = 'lad_id']
 # save lads to database and csv file for github
 dbSendQuery(dbc, "TRUNCATE TABLE lads")
 dbWriteTable(dbc, 'lads', lads, row.names = FALSE, append = TRUE)
-write.csv(lads, 'LADs.csv', row.names = FALSE)
+write.csv(lads, 'csv/LADs.csv', row.names = FALSE)
 
 # add OA id to shops
 dbcp = dbConnect(MySQL(), group = 'dataOps', dbname = 'geography_uk')
